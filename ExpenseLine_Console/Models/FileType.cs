@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExpenseLine_Console.Models
 {
-    public class Vendor
+    public class FileType
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Extension { get; set; }
     }
 }

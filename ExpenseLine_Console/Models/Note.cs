@@ -8,5 +8,9 @@ namespace ExpenseLine_Console.Models
 {
     public class Note
     {
+        public int Id { get; set; }
+        public Employee WrittenBy { get; set; }
+        public string NoteText { get; set; }
+        public DateTime DateAdded { get; set; }
     }
 }

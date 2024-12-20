@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ExpenseLine_Console.Models
 {
-    public class Vendor
+    public class GLAccount
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string AccountNumber { get; set; }
     }
 }

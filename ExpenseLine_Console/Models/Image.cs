@@ -8,5 +8,10 @@ namespace ExpenseLine_Console.Models
 {
     public class Image
     {
+        public int Id { get; set; }
+        public string FileName { get; set; }
+        public DateTime UploadTime { get; set; }
+        public Employee UploadedBy { get; set; }
+        public FileType FileType { get; set; }
     }
 }
