@@ -1,4 +1,6 @@
 ﻿using ExpenseLine_Console.Data;
+using ExpenseLine_Console.App;
+using ExpenseLine_Console.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -11,17 +13,9 @@ namespace ExpenseLine_Console
         {
             Console.WriteLine("Program Starts Here!!");
 
-            // register appdbcontext for dependency injection
-            var servicecollection = new ServiceCollection();
+            AppDbContext appDbContext = new AppDbContext();
 
-            // register dbcontext with di
-            servicecollection.<AppDbContext>(options =>
-                options.usesqlite("c:\\users\\jvand\\source\\repos\\expenseline_console\\expensedatabase.db3"));
-
-            // build the service provider
-            var serviceprovider = servicecollection.buildserviceprovider();
-
-
+            GLAccount_Program gLAccount_Program = new GLAccount_Program(appDbContext);
 
             Console.WriteLine("Program Ends Here!! - Thanks for playing.");
         }
