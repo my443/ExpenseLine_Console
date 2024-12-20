@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
@@ -12,7 +13,9 @@ namespace ExpenseLine_Console.Models
         public int Id { get; set; }
         public GLAccount Account { get; set; }
         public Department Department { get; set; }
+        [Precision(18, 2)]
         public Decimal Hst {  get; set; }
+        [Precision(18, 2)]
         public Decimal Amount { get; set; }
     }
 }

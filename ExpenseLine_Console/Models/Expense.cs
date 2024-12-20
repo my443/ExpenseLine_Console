@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
 using System.Linq;
@@ -10,7 +11,9 @@ namespace ExpenseLine_Console.Models
     public class Expense
     {
         public int Id { get; set; }
+        [Precision(18, 2)]
         public decimal TotalAmount { get; set; }
+        [Precision(18, 2)]
         public decimal TotalHst { get; set; }
         public Vendor Vendor { get; set; }
         public Employee SubmittedBy { get; set; }
